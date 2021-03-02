@@ -1,0 +1,116 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport"content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>сайт</title>
+   <link rel="stylesheet" href="css/main.css">
+ </head>
+ <body>
+   <header>
+     <div id="logo" onclick="slowScroll('#top')">
+         <span>Школа футбола</span>
+         <span>ЛокоБол</span>
+      </div>
+      <div id="about">
+           <a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
+           <a href="#"onclick="slowScroll('#overview')" title="Преимущества">Преимущества</a>
+           <a href="#"onclick="slowScroll('#contacts')" title="Контакты">Обратная связь</a>
+           <a href="#"onclick="slowScroll('#faq')" title="Ответы на вопросы">Информация</a>
+           <a href="#"onclick="slowScroll('#video')" title="Видеообзор">Видеообзор</a>
+
+      </div>
+    </header>
+
+    <div id="top">
+        <h1>Футбол самое важное дело</h1>
+        <h3>из всех не важных дел!</h3>
+    </div>
+
+    <div id= "main">
+      <div class= "intro">
+        <h2> Мы растим чемпионов</h2>
+          <span>Набор детей от 3 лет</span>
+      </div>
+        <div class="text">
+          <span> Даем возможность раскрыть талант</span>
+     </div>
+    </div>
+
+ <div id="overview">
+  <h2>Преимущества:</h2>
+  <h4>с нами все получится</h4>
+
+  <div class="img">
+    <img src="https://cdn1.savepice.ru/uploads/2021/2/19/8eeece3217b0d6506d52826652b96d1a-full.jpg" alt="">
+    <span>Тренировки</span>
+  </div>
+  <div class="img">
+      <img src="https://cdn1.savepice.ru/uploads/2021/2/19/7780f1c05420d7fa13522192189ead94-full.jpg" alt="">
+      <span>Расписание</span>
+  </div>
+  <div class="img">
+        <img src="https://cdn1.savepice.ru/uploads/2021/2/19/0139fb6232e6bb949dc7fec7fdb9ddf0-full.jpg" alt="">
+        <span>Упражнения</span>
+  </div>
+  <div class="img">
+          <img src="https://cdn1.savepice.ru/uploads/2021/2/19/fde44a4c827f9549c0f4a1e72b95183f-full.jpg" alt="">
+          <span>Достижения</span>
+    </div>
+  </div>
+
+<div id="contacts">
+  <center><h5>Обратная связь</h5></center>
+  <form id="form_input">
+    <label for="name">Имя <span>*</span><label><br>
+      <input type="text"placeholder="Введите имя" name="name" id="name"><br>
+      <label for="email">Ваша почта <span>*</span><label><br>
+        <input type="email"placeholder="Введите email" name="email" id="email"><br>
+        <label for="message">Сообщение <span>*</span><label><br>
+          <textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+          <div id="mess_send" class="btn"> Отправить</div>
+        </form>
+      </div>
+
+    <div id="faq">
+  <div>
+    <span class="title">Услуги</span><br>
+    <span class="headig">Детская футбольная школа "ЛокоБол".
+Крупнейшая в России сеть частных футбольных школ. Филиал в городе Вологда.
+Предварительный набор детей с 3х лет!Первое пробное занятие бесплатно.
+Мы приглашаем Вас приобщить ваших детей к самому замечательному и популярному виду спорта - футболу!</span>
+      </div>
+    <div>
+      <span class="title">Контакты</span><br>
+    <span class="headig">Наш режим работы с Пн-Пт 08:00-20:00
+    Суббота,воскресенье выходной, телефон для связи +7921000000 </span>
+    </div>
+      <div>
+        <span class="title">О сайте</span><br>
+        <span class="headig">Сайт был сделан студентом кафедры АВТ Наумовым А.С.</span>
+              </div>
+      </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      function slowScroll(id) {
+        $('html, body').animate({
+            scrollTop: $(id).offset().top
+            }, 500);
+          }
+
+          $(document).on("Scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+      $("header").attr("class", "fixed");
+    });
+   </script>
+   </body>
+ </html>
+
+ <div id="video">
+  <h2>Видеообзор</h2>
+  <iframe width="800" height="600" src="https://www.youtube.com/embed/fF3UZQb7DoY?autoplay=1"</iframe><br>
+ </div>
